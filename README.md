@@ -1,6 +1,10 @@
 # newApp_Chapter4
 
-A new Flutter project.
+###################################################################################
+
+#################################### Chapter 4 ####################################
+
+###################################################################################
 
 ## Getting Started
 
@@ -49,3 +53,15 @@ Step 16 - Used Open Sans for Entire Texts on Screen by globally declaring it and
 Step 17 - Add a Text and an image if there are no transactions added. Used Image widget for inserting an image from "assets/images/" directory and making it's entry in assets section present in pubspec.yaml file.
 
 Step 18 - Implement Chart Bar which will be representing the week's expenses using bar chart in which there are 7 bars representing each week day. This is implemented by using stacked(overlayed) containers (One container and one FractionallySizedBox). Where one container is used to show body of bar and one container (FractionallySizedBox) is used to represent expense compared to other week days. This height is controlled using parameter "heightFactor" in FractionallySizedBox widget.
+
+Step 19 - Used ListTile widget for improved UI of Transaction List
+
+Step 20 - Add DatePicket widget to select date manually for each item.
+
+Step 21 - Add Delete button and respective login to delete an item from list by clicking the delete button provided on each ViewTile.
+
+#######################################################################################
+
+All of the above steps are completed and the application is implemented successfully. Completed Chapter 4 here ##############################################################
+
+#######################################################################################

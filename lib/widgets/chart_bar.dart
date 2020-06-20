@@ -5,7 +5,7 @@ class ChartBar extends StatelessWidget {
   final double spendingAmount;
   final double factor;
 
-  ChartBar(this.label,this.spendingAmount,this.factor);
+  ChartBar(this.label, this.spendingAmount, this.factor);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,10 @@ class ChartBar extends StatelessWidget {
     print(spendingAmount);
     return Column(
       children: <Widget>[
-        FittedBox(child: Text('₹${spendingAmount.toStringAsFixed(0)}')),
+        Container(
+            height: 20,
+            child: FittedBox(
+                child: Text('₹${spendingAmount.toStringAsFixed(0)}'))),
         SizedBox(
           height: 4,
         ),
