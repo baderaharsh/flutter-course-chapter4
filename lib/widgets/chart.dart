@@ -33,20 +33,30 @@ class Chart extends StatelessWidget {
 
   double get totalSpending {
     return groupedTransactionValues.fold(0.0, (sum, item) {
-        return sum + item['amount'];
-      });
+      return sum + item['amount'];
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: EdgeInsets.all(20),
       elevation: 6,
       // margin: EdgeInsets.all(20),
-      child: recentTransactions.isEmpty ? null : Row(
-        children: groupedTransactionValues.map((data) {
-          return ChartBar(data['day'],data['amount'],(data['amount'] as double)/totalSpending);
-        }).toList(),
-      ),
+      child: recentTransactions.isEmpty
+          ? null
+          : Padding(
+            padding: const EdgeInsets.all(10),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: groupedTransactionValues.map((data) {
+                  return Flexible(
+                      fit: FlexFit.tight,
+                      child: ChartBar(data['day'], data['amount'],
+                          (data['amount'] as double) / totalSpending));
+                }).toList(),
+              ),
+          ),
     );
   }
 }
