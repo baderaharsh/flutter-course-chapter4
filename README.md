@@ -46,3 +46,6 @@ Step 16 -  Adding new Fonts. Downloaded fonts data from given sources. Copied th
 
 Step 16 - Used Open Sans for Entire Texts on Screen by globally declaring it and then using them by using style arguement.
 
+Step 17 - Add a Text and an image if there are no transactions added. Used Image widget for inserting an image from "assets/images/" directory and making it's entry in assets section present in pubspec.yaml file.
+
+Step 18 - Implement Chart Bar which will be representing the week's expenses using bar chart in which there are 7 bars representing each week day. This is implemented by using stacked(overlayed) containers (One container and one FractionallySizedBox). Where one container is used to show body of bar and one container (FractionallySizedBox) is used to represent expense compared to other week days. This height is controlled using parameter "heightFactor" in FractionallySizedBox widget.
