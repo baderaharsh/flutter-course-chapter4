@@ -43,9 +43,7 @@ class Chart extends StatelessWidget {
       margin: EdgeInsets.all(20),
       elevation: 6,
       // margin: EdgeInsets.all(20),
-      child: recentTransactions.isEmpty
-          ? null
-          : Padding(
+      child: Padding(
             padding: const EdgeInsets.all(10),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -53,7 +51,7 @@ class Chart extends StatelessWidget {
                   return Flexible(
                       fit: FlexFit.tight,
                       child: ChartBar(data['day'], data['amount'],
-                          (data['amount'] as double) / totalSpending));
+                         recentTransactions.isNotEmpty ? (data['amount'] as double) / totalSpending : 0.0));
                 }).toList(),
               ),
           ),

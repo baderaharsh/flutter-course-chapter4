@@ -1,10 +1,8 @@
 # newApp_Chapter4
 
-###################################################################################
-
-#################################### Chapter 4 ####################################
-
-###################################################################################
+#######################################################################################
+###################################### Chapter 4 ######################################
+#######################################################################################
 
 ## Getting Started
 
@@ -65,3 +63,18 @@ Step 21 - Add Delete button and respective login to delete an item from list by 
 All of the above steps are completed and the application is implemented successfully. Completed Chapter 4 here ##############################################################
 
 #######################################################################################
+###################################### Chapter 5 ######################################
+#######################################################################################
+
+## Responsiveness and Adaptiveness 
+
+Step 1 - [Responsiveness]For fixing the bug and improving scrolling of Chart and item list, we will use MediaQuery to set size details dynamically based on device size. Set ratio to 3:7 :: chart:itemList.
+
+Step 2 - Set dynamic values for the widgets in ChartBar. Used LayoutBuilder with gives the information about the widget and it's properties(Constraints) which can be used for respective modifications.
+
+Step 3 - Temporary solution to avoid bugs on Landscape mode, set app the to be in Potrait state only. This can be done by importing services.dart, then using WidgetsFlutterBinding.ensureInitialized() and setting up SystemChrome.setPreferredOrientation method.
+
+Step 4 - Add switch button. Which will result in - either we can see a Chart Bar or the list of items. [again creates a bug, this time for Potrait mode].
+
+Step 5 - If in Landscape mode (checking using boolean variable) then show Switch button and render respective content. If in Potraid mode, then hide Switch button and show whole content i.e. Chart + List. This will make application Responsive for all type of device sizes as well as orientation mode i.e. Landscape and Potrait.
+
